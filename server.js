@@ -5,29 +5,31 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const fenwickRoutes = require('./routes/fenwickRoutes');
 
-// Initialize app
 const app = express();
 
-// Middleware
 app.use(express.json());
 app.use(cors());
 
-// Connect to MongoDB
-connectDB();
-
-// Basic Test Route (Verification)
-app.get('/', (req, res) => {
-    res.status(200).send('API Working');
-});
-
-// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/fenwick', fenwickRoutes);
 
-// Define Port
-const PORT = process.env.PORT || 5000;
+const { internalInitialize } = require('./controllers/fenwickController');
 
-// Start Server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+const startServer = async () => {
+    await connectDB();
+    
+    try {
+        const stats = await internalInitialize();
+        console.log(`Fenwick Tree Initialized: ${stats.count} records processed.`);
+    } catch (err) {
+        console.error('Initial Tree Sync Failed:', err.message);
+    }
+
+    const PORT = process.env.PORT || 5050;
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+};
+
+startServer();
+

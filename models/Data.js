@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const dataSchema = new mongoose.Schema({
     index: {
         type: Number,
-        required: true
+        required: true,
+        index: true
     },
     value: {
         type: Number,
