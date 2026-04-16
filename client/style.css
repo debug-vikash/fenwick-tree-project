@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Auth pages styling */
 .container {
     background-color: #ffffff;
     width: 360px;
@@ -23,7 +22,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Global App Header */
 .app-header {
     background-color: #ffffff;
     color: #333;
@@ -119,14 +117,12 @@ body {
     color: #e53e3e;
 }
 
-/* Multi-page layout */
 .app-layout {
     display: flex;
     min-height: 100vh;
-    padding-top: 60px; /* offset for fixed header */
+    padding-top: 60px;
 }
 
-/* Sidebar styling */
 .sidebar {
     width: 240px;
     background-color: #fcfcfc;
@@ -134,7 +130,7 @@ body {
     box-shadow: 2px 0 8px rgba(0,0,0,0.02);
     padding: 25px 0;
     position: fixed;
-    top: 60px; /* start below header */
+    top: 60px;
     height: calc(100% - 60px);
     overflow-y: auto;
 }
@@ -189,10 +185,9 @@ body {
     background-color: #fff5f5 !important;
 }
 
-/* Main content styling */
 .main-content {
     flex: 1;
-    margin-left: 240px; /* offset for fixed sidebar */
+    margin-left: 240px;
     padding: 40px;
     background-color: #f8f9fa;
     display: flex;
@@ -295,7 +290,6 @@ button.wide-btn {
     box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
-/* Form Styles */
 .form-group {
     margin-bottom: 20px;
 }
@@ -357,7 +351,6 @@ button:hover {
     background: linear-gradient(135deg, #0069d9, #004494);
 }
 
-/* Table Styles */
 .simple-table {
     width: 100%;
     border-collapse: separate;
@@ -388,7 +381,6 @@ button:hover {
     background-color: #f1f5f9;
 }
 
-/* Utilities */
 .message {
     margin-top: 20px;
     padding: 12px 16px;
