@@ -3,6 +3,11 @@
 <head>
     <title>Fenwick Tree - Dashboard</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        if (!localStorage.getItem("userEmail")) {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 <body>
     <header class="app-header">

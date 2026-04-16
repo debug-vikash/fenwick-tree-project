@@ -77,7 +77,6 @@ const profileDropdown = document.getElementById('profileDropdown');
 if (userProfileToggle || logoutBtn || logoutDropdownBtn) {
     const loggedInEmail = localStorage.getItem("userEmail");
     if (!loggedInEmail) {
-        alert("Please login first!");
         window.location.href = "login.html";
     } else {
         const displayUsername = document.getElementById('displayUsername');
